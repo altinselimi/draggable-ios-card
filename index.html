@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Draggable POC</title>
+		<link rel="stylesheet" href="./main.scss" />
+	</head>
+	<body>
+		<div class="stocks-app">
+			<div class="main__wrapper">
+				<div class="main__header">
+					<div>
+						<h1>Stocks</h1>
+						<h1 style="opacity: .75">June 21</h1>
+					</div>
+					<button>Edit</button>
+				</div>
+				<div class="main__content-wrapper">
+					<div class="main__content">
+						<ul id="stock-list">
+							<template id="stock-template">
+								<li class="stock">
+									<div>
+										<p class="stock__name"></p>
+										<p class="stock__description"></p>
+									</div>
+									<div>
+										<span class="stock__value">
+											25,871.46
+										</span>
+										<span>
+											-208.64
+										</span>
+									</div>
+								</li>
+							</template>
+						</ul>
+					</div>
+					<div class="main__secondary-content">
+						<div
+							class="draggable-area"
+							ontouchstart="startDraggingHandler(event)"
+							ontouchmove="draggingHandler(event)"
+							ontouchend="stopDraggingHandler(event)"
+						>
+							<div class="draggable-area__thumb"></div>
+						</div>
+						<h1>Business Insider</h1>
+						<ul id="article-list">
+							<template id="bi-article">
+								<li>
+									Eum quibusdam, laborum tenetur perspiciatis
+									labore accusantium reiciendis atque sunt
+									repellendus alias, eaque maiores obcaecati
+									officiis.
+								</li>
+							</template>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./index.js"></script>
+</html>

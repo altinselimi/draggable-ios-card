@@ -1,0 +1,136 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+body {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+.stocks-app {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.main {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 20px;
+    padding-bottom: 0px;
+    button {
+      border: none;
+      margin-left: auto;
+      background: transparent;
+      color: blue;
+      font-size: 22px;
+    }
+  }
+  &__content-wrapper {
+    height: calc(100vh - 64px);
+    overflow-y: auto;
+  }
+  &__content,
+  &__secondary-content {
+    padding: 0px 20px;
+    overflow-y: auto;
+  }
+  &__content {
+    padding-bottom: 20%;
+  }
+  &__secondary-content {
+    background-color: rgba(white, 0.75);
+    min-height: 20vh;
+    flex: 1;
+    flex-shrink: 0;
+    border-radius: 18px;
+    box-shadow: 0px 0px 5px 1px rgba(black, 0.1);
+    position: fixed;
+    z-index: 1;
+    top: 80%;
+    left: 0px;
+    width: 100%;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    transition: transform 0.2s ease-out;
+    will-change: transform;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 20px 0px;
+  li {
+    padding: 10px 0px;
+    border-top: solid 1px whitesmoke;
+    display: flex;
+    align-items: center;
+    &:first-child {
+      border-top-color: transparent;
+    }
+    div:last-child {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.stock {
+  &__name {
+    font-size: 24px;
+    font-weight: 900;
+  }
+  &__description {
+    font-size: 18px;
+    opacity: 0.75;
+  }
+}
+
+.draggable-area {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  cursor: pointer;
+  &__thumb {
+    margin: auto;
+    border-radius: 50px;
+    width: 35px;
+    height: 4px;
+    overflow: hidden;
+    background-color: #dbdbdb;
+    box-shadow: 0px 0px 0px 1px #dbdbdb;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  line-height: 1;
+}
+
+h1 {
+  font-weight: 900;
+}

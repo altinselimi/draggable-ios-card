@@ -1,0 +1,28 @@
+{
+  "name": "draggable-ios",
+  "version": "1.0.0",
+  "description": "POC for a draggable content card",
+  "main": "index.html",
+  "scripts": {
+    "dev": "parcel watch index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altinselimi/draggable-ios-card.git"
+  },
+  "keywords": [
+    "ios",
+    "web",
+    "draggable"
+  ],
+  "author": "Altin Selimi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/altinselimi/draggable-ios-card/issues"
+  },
+  "homepage": "https://github.com/altinselimi/draggable-ios-card#readme",
+  "devDependencies": {
+    "sass": "^1.26.9"
+  }
+}
