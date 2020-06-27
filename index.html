@@ -18,24 +18,7 @@
 				</div>
 				<div class="main__content-wrapper">
 					<div class="main__content">
-						<ul id="stock-list">
-							<template id="stock-template">
-								<li class="stock">
-									<div>
-										<p class="stock__name"></p>
-										<p class="stock__description"></p>
-									</div>
-									<div>
-										<span class="stock__value">
-											25,871.46
-										</span>
-										<span>
-											-208.64
-										</span>
-									</div>
-								</li>
-							</template>
-						</ul>
+						<ul id="stock-list"></ul>
 					</div>
 					<div class="main__secondary-content">
 						<div
@@ -46,21 +29,35 @@
 						>
 							<div class="draggable-area__thumb"></div>
 						</div>
-						<h1>Business Insider</h1>
-						<ul id="article-list">
-							<template id="bi-article">
-								<li>
-									Eum quibusdam, laborum tenetur perspiciatis
-									labore accusantium reiciendis atque sunt
-									repellendus alias, eaque maiores obcaecati
-									officiis.
-								</li>
-							</template>
-						</ul>
+						<h1 style="margin-bottom: 10px;">Business Insider</h1>
+						<ul id="article-list"></ul>
 					</div>
 				</div>
 			</div>
 		</div>
+		<template id="stock-template">
+			<li class="stock">
+				<div>
+					<p class="stock__name"></p>
+					<p class="stock__description"></p>
+				</div>
+				<div>
+					<span class="stock__value">
+						25,871.46
+					</span>
+					<span class="stock__value danger">
+						-208.64
+					</span>
+				</div>
+			</li>
+		</template>
+		<template id="bi-article">
+			<li>
+				Eum quibusdam, laborum tenetur perspiciatis labore accusantium
+				reiciendis atque sunt repellendus alias, eaque maiores obcaecati
+				officiis.
+			</li>
+		</template>
 	</body>
 	<script src="./index.js"></script>
 </html>
