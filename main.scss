@@ -9,6 +9,10 @@
   --blue: #7fd0fa;
 }
 
+html {
+  font-size: 18px;
+}
+
 html,
 body {
   height: 100%;
@@ -46,33 +50,33 @@ body {
     padding: 20px;
     button {
       border: none;
-      margin-left: auto;
       background: transparent;
       color: var(--blue);
-      font-size: 22px;
+      font-size: 1rem;
+      margin: 0px;
+      margin-left: auto;
+      padding: 0px;
     }
   }
-  &__content-wrapper {
-    height: calc(100vh - 64px);
-    overflow-y: auto;
-  }
   &__content,
-  &__secondary-content {
+  &__draggable-content {
     padding: 0px 20px;
     overflow-y: auto;
     will-change: transform;
   }
   &__content {
-    padding-bottom: 20%;
+    height: calc(100vh - 64px);
+    margin-bottom: calc(20vh + 20px);
+    overflow-y: auto;
   }
-  &__secondary-content {
+  &__draggable-content {
     background-color: var(--dark-shade-1);
     min-height: 20vh;
     border-radius: 18px;
     box-shadow: 0px 0px 5px 1px rgba(black, 0.1);
     position: fixed;
     z-index: 1;
-    top: 75%;
+    top: 70%;
     left: 0px;
     width: 100%;
     backdrop-filter: blur(25px);
@@ -105,11 +109,11 @@ ul {
 
 .stock {
   &__name {
-    font-size: 24px;
+    font-size: 1.2rem;
     font-weight: 900;
   }
   &__description {
-    font-size: 18px;
+    font-size: 1rem;
     opacity: 0.75;
   }
   &__value {
@@ -151,4 +155,5 @@ p {
 
 h1 {
   font-weight: 900;
+  font-size: 1.8rem;
 }

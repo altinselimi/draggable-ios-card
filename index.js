@@ -37,7 +37,7 @@ let initialDragClientY = 0;
 // so we have a straight forward way of updating style
 // whenever its value changes
 const draggableContentElement = document.querySelector(
-  ".main__secondary-content"
+  ".main__draggable-content"
 );
 const yDrag = {
   dragValue: 0,
@@ -54,11 +54,11 @@ const yDrag = {
 const { height: headerHeight } = document
   .querySelector(".main__header")
   .getBoundingClientRect();
-const { top: secondaryContentTop } = document
-  .querySelector(".main__secondary-content")
+const { top: draggableContentTop } = document
+  .querySelector(".main__draggable-content")
   .getBoundingClientRect();
 
-const draggableArea = secondaryContentTop - headerHeight;
+const draggableArea = draggableContentTop - headerHeight;
 const startFromBottomDestination = draggableArea * -1;
 const startFromTopDestination = 0;
 
