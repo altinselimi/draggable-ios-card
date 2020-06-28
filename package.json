@@ -25,6 +25,7 @@
   "homepage": "https://github.com/altinselimi/draggable-ios-card#readme",
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "parcel": "^1.12.4",
     "sass": "^1.26.9"
   }
 }
