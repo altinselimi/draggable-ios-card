@@ -3,34 +3,32 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Draggable POC</title>
+		<title>STONKS</title>
 		<link rel="stylesheet" href="./main.scss" />
 	</head>
 	<body>
 		<div class="stocks-app">
-			<div class="main__wrapper">
-				<div class="main__header">
-					<div>
-						<h1>Stocks</h1>
-						<h1 style="opacity: .75">June 21</h1>
-					</div>
-					<button>Edit</button>
+			<div class="main__header">
+				<div>
+					<h1>Stonks</h1>
+					<h1 style="opacity: .75">June 21</h1>
 				</div>
-				<div class="main__content">
-					<ul id="stock-list"></ul>
+				<button>Edit</button>
+			</div>
+			<div class="main__content">
+				<ul id="stock-list"></ul>
+			</div>
+			<div class="main__draggable-content">
+				<div
+					class="draggable-area"
+					ontouchstart="startDraggingHandler(event)"
+					ontouchmove="draggingHandler(event)"
+					ontouchend="stopDraggingHandler(event)"
+				>
+					<div class="draggable-area__thumb"></div>
 				</div>
-				<div class="main__draggable-content">
-					<div
-						class="draggable-area"
-						ontouchstart="startDraggingHandler(event)"
-						ontouchmove="draggingHandler(event)"
-						ontouchend="stopDraggingHandler(event)"
-					>
-						<div class="draggable-area__thumb"></div>
-					</div>
-					<h1 style="margin-bottom: 10px;">Business Insider</h1>
-					<ul id="article-list"></ul>
-				</div>
+				<h1 style="margin-bottom: 10px;">Business Insider</h1>
+				<ul id="article-list"></ul>
 			</div>
 		</div>
 		<template id="stock-template">

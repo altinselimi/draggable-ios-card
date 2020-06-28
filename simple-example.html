@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Draggable POC</title>
+		<link rel="stylesheet" href="./simple-example.scss" />
+	</head>
+	<body>
+		<div class="main-card"></div>
+		<div class="draggable-card">
+			<div
+				class="draggable-thumb-wrapper"
+				ontouchstart="startDraggingHandler(event)"
+				ontouchmove="draggingHandler(event)"
+				ontouchend="stopDraggingHandler(event)"
+			>
+				<div class="draggable-thumb"></div>
+			</div>
+		</div>
+	</body>
+	<script>
+		let yDragValue = 0;
+		let isDragging = false;
+		let initialDragClientY = 0;
+		const draggableElement = document.querySelector(".draggable-card");
+
+		function startDraggingHandler(event) {
+			isDragging = true;
+			const { clientY } = event.touches[0];
+			initialDragClientY = clientY;
+		}
+		function draggingHandler(event) {
+			if (!isDragging) return;
+			const { clientY } = event.touches[0];
+			yDragValue = clientY - initialDragClientY;
+			draggableElement.style.transform = `translateY(${yDragValue}px)`;
+		}
+		function stopDraggingHandler(event) {
+			if (!isDragging) return;
+			const { clientY } = event.changedTouches[0];
+			isDragging = false;
+		}
+	</script>
+</html>
